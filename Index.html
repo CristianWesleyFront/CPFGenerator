@@ -5,12 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>CPFGenerator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!---<link rel="stylesheet" type="text/css" media="screen" href="main.css" />-->
+   
 </head>
-<body>
-    <h1>Gerador CPF</h1>
-    <button>Gerar</button><br>
-    <input type="text">
+<body   class="bg-info">
+    <div class="container-fluid ">
+            <div class="row ">
+                    <div class="col" >
+                        <br><br><br><br><br><br><br><br><br>
+                    </div>
+                </div>
+            </div>
+        <div class="row ">
+            
+               
+            <div class="col" >
+                    <br><br><br><br><br><br><br>
+                </div>
+            <div class="col border border-light rounded bg-light">
+                <h1 class="text-center font-weight-light ">Gerador <span class="text-center font-weight-bold text-info"> CPF</span></h1>
+                <p class="text-center">
+                    <button  onclick="cpf();" class="btn btn-outline-info">
+                        Gerar
+                    </button>
+                   
+                </p>
+                
+                <span id="input" ></span>
+                
+            
+                <script src="js/main.js?v=0.2"></script>
+            </div>  
+            <div class="col" >
+                    <br><br><br><br><br><br><br>
+                </div>
+            <div class="col border border-light rounded bg-light">
+                    <h1 class="text-center font-weight-light ">Validar <span class="text-center font-weight-bold text-info"> CPF</span></h1>
+                    <p class="text-center">
+                        <button  onclick="validarCpf();" class="btn btn-outline-info">
+                            validar
+                        </button>
+                    </p>
+                    <input type="text" class="form-control" id="validarinput">
+                    
+                
+                    <script src="js/main.js?v=0.2"></script>
+            </div>
+            <div class="col" >
+                    <br><br><br><br><br><br><br>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
