@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/CristianWesleyFront/CPFGenerator/issues"
   },
-  "homepage": "https://github.com/CristianWesleyFront/CPFGenerator#readme"
+  "homepage": "https://github.com/CristianWesleyFront/CPFGenerator#readme",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
 }

@@ -79,7 +79,7 @@
 } 
 
 function validarCpf(){
-    //let cpf = "1f3.145.123-83"
+    
 
   let cpf = document.getElementById("validarinput").value;
    
@@ -173,7 +173,7 @@ function validarCpf(){
     }
 
 
-
+    
 }
 
 
