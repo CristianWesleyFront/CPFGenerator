@@ -1,5 +1,4 @@
-
- function cpf() {
+function cpf() {
     function gerar(){
         let cpf = [];
         for(let i=0; i<9;i++){
@@ -79,7 +78,7 @@
 } 
 
 function validarCpf(){
-    //let cpf = "1f3.145.123-83"
+    
 
   let cpf = document.getElementById("validarinput").value;
    
@@ -173,8 +172,6 @@ function validarCpf(){
     }
 
 
-
+    
 }
-
-
 
