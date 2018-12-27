@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <title>CPFGenerator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.maskedinput-1.1.4.pack.js"></script>
+
+</head>
+
+<body  class="bg-info">
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#validarinput").mask("999.999.999-99");
+        });
+       // $(document).on("submit", "form", function(e) {
+        //     $.post($(this).attr("action"), $(this).serialize(), function(data) {
+        //         $("#input").html(data);
+        //     });
+        //     return false;
+        //}); FAZ OS DOIS RESULTADOS SEREM DITOS NO CANTO QUE APARECE O CPF
+        
+        $(document).on("submit", "#gera", function(e) {
+            $.post("/geraCPF", {}, function(data) {
+                $("#input").html(data);
+            });
+            return false;
+        });
+
+        $(document).on("submit", "#valida", function(e) {
+            $.post($(this).attr("action"),$(this).serialize(), function(data) {
+                alert(data);
+            });
+            return false;
+        });
+        
+    </script>
+
+    <div class="container-fluid ">
+        <div class="row ">
+            <div class="col" >
+                <br><br><br><br><br><br><br><br><br>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col" >
+                <br><br><br><br><br><br><br>
+            </div>
+            <div class="col border border-light rounded bg-light">
+                <h1 class="text-center font-weight-light ">Gerador <span class="text-center font-weight-bold text-info"> CPF</span></h1>    
+                    <form action="/geraCPF" method="POST" id="gera">
+                        <p class="text-center">
+                            <input type="submit" class="btn btn-outline-info" >
+                        </p>
+                    </form> 
+                <span id="input" ></span>   
+            </div>  
+            <div class="col" >
+                <br><br><br><br><br><br><br>
+            </div>
+
+            <div class="col border border-light rounded bg-light">
+                <h1 class="text-center font-weight-light ">Validar <span class="text-center font-weight-bold text-info"> CPF</span></h1>
+'
+                    <form action="/validaCPF" method="POST" id="valida">
+                        <p class="text-center">
+                            <input type="submit" class="btn btn-outline-info">
+                        </p>
+                        <input type="text" class="form-control"  data-mask="000.000.000-00" maxlength="14" id="validarinput" autocomplete="off" name="cpf">   
+                    </form>
+            </div>
+
+            <div class="col" >
+                <br><br><br><br><br><br><br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

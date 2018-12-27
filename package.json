@@ -10,8 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/CristianWesleyFront/CPFGenerator.git"
   },
-  "author": "",
+  "author": "Cristian Wesley",
   "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "pug": "^2.0.3"
+  },
   "bugs": {
     "url": "https://github.com/CristianWesleyFront/CPFGenerator/issues"
   },
